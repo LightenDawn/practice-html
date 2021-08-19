@@ -126,16 +126,34 @@ form .gender-details .category {
 ~ -> 大量選取元件
 檢查category底下的dot-1 label是否被觸發和label底下的class=one
 */
+
+/* 
 #dot-1:checked ~ .category label .one,
 #dot-2:checked ~ .category label .two,
-#dot-3:checked ~ .category label .three {
+#dot-3:checked ~ .category label .three,
+#id_gender input[type=radio]:checked ~ .category label .one,
+#id_gender_1 input[type=radio]:checked ~ .category label .two,
+#id_gender_2 input[type=radio]:checked ~ .category label .three{
+  border-color: #d9d9d9;
+  background: #9b59b6;  
+}
+} */
+
+input[type=radio]{
+  display: none;
+}
+
+#id_gender_0:checked ~ label .one,
+#id_gender_1:checked~ label .two,
+#id_gender_2:checked~ label .three{
   border-color: #d9d9d9;
   background: #9b59b6;
 }
 
-form input[type="radio"] {
+
+/*form input[type="radio"] {
   display: none;
-}
+}*/
 
 form .button {
   height: 45px;
