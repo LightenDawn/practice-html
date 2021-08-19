@@ -61,7 +61,7 @@ form .user-details .input-box {
   font-weight: 900;
   margin-bottom: 5px;
 }
-.user-details .input-box input {
+.user-details .input-box input{
   height: 45px;
   width: 100%;
   /* 邊框設定 */
@@ -83,9 +83,14 @@ form .user-details .input-box {
 定義：偽類指定一個通過匹配正確的所要求的表單元素;
 在這裡:valid主要的功能是在input輸入框失去焦點是保持最後的狀態。
  */
-.user-details .input-box input:focus,
-.user-details .input-box input:valid {
+ 
+.user-details .input-box input:focus{
   border-color: #9b59b6;
+}
+
+.input-box .errorlist {
+  color: red;
+  font-weight: 900;
 }
 
 form .gender-details .gender-title {
