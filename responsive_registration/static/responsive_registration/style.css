@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  display: flex;
+  /* vh = view height 隨著螢幕大小進行縮放, 單位為百分比 */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  /* 網頁縮到最小時, 會有10px的預留 */
+  padding: 10px;
+  /* 每135度做一次顏色 */
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before {
+  /* 使用 ::before 和 ::after 一定要有 content 否則不會發生作用 */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  /* 均勻排列每個元素 首個元素放置於起點，末尾元素放置於終點 */
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details {
+  display: block;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  /* 邊框設定 */
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+/*
+:focus
+定義：獲得焦點的元素，一般用於表單(input、textarea);
+觸發條件：當用戶點選或觸控元素或通過鍵盤的 “tab” 鍵選擇它時會被觸發。
+
+:valid
+定義：偽類指定一個通過匹配正確的所要求的表單元素;
+在這裡:valid主要的功能是在input輸入框失去焦點是保持最後的狀態。
+ */
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6;
+}
+
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form .gender-details .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  /* 均勻排列每個元素 首個元素放置於起點，末尾元素放置於終點 */
+  justify-content: space-between;
+}
+
+.gender-details .category label {
+  display: flex;
+  align-items: center;
+}
+
+.gender-details .category .dot {
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* 
+:checked -> 被選取的label
+~ -> 大量選取元件
+檢查category底下的dot-1 label是否被觸發和label底下的class=one
+*/
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  border-color: #d9d9d9;
+  background: #9b59b6;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+/*
+Media Queries 代表網頁會先「詢問 query」「媒體 media」的屬性，
+再針對這些屬性定義樣式，通常在 CSS 裡並沒有大多都是權重大小「覆蓋」的方式，
+但 media 本身卻帶有些「邏輯」的概念，透過邏輯的寫法，如果媒體條件符合為 true，
+就會套用樣式，反之為 false 就不會套用樣式。
+*/
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .gender-details .category {
+    width: 100%;
+  }
+  .container form .user-details {
+    max-height: 300px;
+    /* CSS屬性overflow-y 決定如何處理溢出的內容 */
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+      width: 0;
+  }
+}
