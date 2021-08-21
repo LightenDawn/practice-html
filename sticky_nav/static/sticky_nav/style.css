@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@369&display=swap');
+
+
+*{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* background: #4070f4; */
+    padding: 20px;
+    transition: all 0.4s ease;
+}
+
+nav.sticky{
+    padding: 15px 20px;
+    background: #4070f4;
+}
+
+nav .nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-content .logo a{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #4070f4;
+}
+
+nav.sticky .nav-content .logo a{
+    color: #fff;
+}
+
+.nav-content .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-content .nav-links li{
+    list-style: none;
+    margin: 0 8px;
+}
+
+.nav-links li a{
+    font-size: 18px;
+    font-weight: 500;
+    color: #0e2431;
+    padding: 10px 4px;
+    transition: all 0.4s ease;
+}
+
+.nav-links li a:hover{
+    color: #4070f4;
+}
+
+nav.sticky .nav-links li a{
+    color: #fff;
+}
+
+nav.sticky .nav-links li a:hover{
+    color: #0e2431;
+}
+
+
+.home{
+    height: 100vh;
+    width: 100%;
+    background: url("image/bg.jpg") no-repeat;
+    /* 
+    background-size: contain; => contain值是不超過原圖的大小這個前提下，等比縮小到符合，不加以裁切或伸展，通常用在圖比容器大的背景聲明裡。
+    background-size: cover => cover值是等比例縮放，讓圖片可以蓋滿元素寬高，若因為比例與元素不均等，導致寬度或高度超過，就會裁切。
+    */
+    background-size: cover;
+    background-position: center;
+}
+
+.text{
+    padding: 40px 80px;
+    text-align: justify;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: #4070f4;
+    margin-bottom: 6px;
+}

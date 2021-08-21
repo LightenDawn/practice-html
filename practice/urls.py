@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("web.urls")),
-    path('res/', include("responsive_registration.urls"))
+    path('res/', include("responsive_registration.urls")),
+    path('sticky/', include("sticky_nav.urls"))
 ]
