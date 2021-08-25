@@ -1,0 +1,92 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+<!-- header start -->
+ <header class="header">
+   <div class="container">
+      <div class="row justify-content-between">
+        <div class="logo">
+          <a href="/portfolio">W</a>
+        </div>
+        <div class="hamburger-btn outer-shadow hover-in-shadow">
+          <span></span>
+        </div>
+      </div>
+    </div>
+ </header>
+ <!-- header end -->
+
+ <!-- navigation menu start -->
+ <nav class="nav-menu">
+   <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
+   <div class="nav-menu-inner">
+     <ul>
+       <li><a href="#" class="inner-shadow active">home</a></li>
+       <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
+       <li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
+       <li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
+       <li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
+       <li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+     </ul>
+   </div>
+   <!-- copyright text -->
+   <p class="copyright-text">&copy; 2020 I Have No Copyright</p>
+ </nav>
+ <!-- navigation menu end -->
+
+ <!-- home section start -->
+ <section class="home-section section">
+    <!-- effect wrap start -->
+    <div class="effect-wrap">
+        <div class="effect effect-1"></div>
+        <div class="effect effect-2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="effect effect-3"></div>
+        <div class="effect effect-4"></div>
+        <div class="effect effect-5">
+             <div></div> <div></div> <div></div> <div></div> <div></div>
+              <div></div> <div></div> <div></div> <div></div> <div></div>
+        </div>
+    </div>
+    <!-- effect wrap end -->
+    <div class="container">
+        <div class="row full-screen align-items-center">
+            <div class="home-text">
+                <p>Hello</p>
+                <h1>I'm Kanna</h1>
+                <h2>Web Designer & Dragon Musume</h2>
+                <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+            </div>
+            <div class="home-img">
+                <div class="img-box inner-shadow">
+                    <img src="{% static "portfolio/image/my.png" %}" class="outer-shadow" alt="portfolio-pic">
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+ <!-- home section end -->
+{% endblock %}

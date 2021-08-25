@@ -1,0 +1,59 @@
+{% extends 'movie_html/base.html' %}
+
+{% block title %}Video Light Box{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="main-video">
+                {% for video in url %}
+                    {% if video.video_id == "cake" %}
+                    <!--controls:  屬性規定瀏覽器應該為視頻提供播放控件。-->
+                        <video controls muted autoplay>
+                            <source src="{{ video.video.url }}" type="video/mp4">
+                        </video>
+                        <i class="bx bx-x close"></i>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% for video in url %}
+                <div class="videos">
+                <!--controls:  屬性規定瀏覽器應該為視頻提供播放控件。-->
+                    <video>
+                        <source src="{{ video.video.url }}" type="video/mp4">
+                    </video>
+                    <i class="bx bx-play-circle"></i>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% comment %} 
+.querySelector() 的方式，他就不僅僅只局限於 id 元素
+只是在使用 .querySelector() 的時候，選取器的方式要像 css 的方式一樣 
+{% endcomment %}
+
+    <script>
+        const section = document.querySelector("section"),
+         mainvideo = document.querySelector(".main-video video"),
+         videos = document.querySelectorAll(".videos"),
+         close = document.querySelector(".close");
+
+         for (var i = 0; i < videos.length; i++) {
+             videos[i].addEventListener("click", (e)=>{
+                 const target = e.target;
+                 section.classList.add("active");
+                 target.classList.add("active"); //adding a active class in the videos tag
+                 let src = document.querySelector(".videos.active video source").src; //getting the source of the video which has active class
+                 console.log(src);
+                 mainvideo.src = src; //putting the source of the video inside the main video
+
+                 close.onclick = ()=>{
+                     section.classList.remove("active");
+                     target.classList.remove("active");
+                    mainvideo.src = ""; //removing the src of the main video, because is still play even we closed
+                 }
+             });
+         }
+    </script>
+{% endblock %}

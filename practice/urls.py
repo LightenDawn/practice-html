@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("web.urls")),
     path('res/', include("responsive_registration.urls")),
-    path('sticky/', include("sticky_nav.urls"))
-]
+    path('sticky/', include("sticky_nav.urls")),
+    path('video/', include("movie_html.urls")),
+    path('portfolio/', include("portfolio.urls"))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

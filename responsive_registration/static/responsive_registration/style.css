@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  list-style: none;
 }
 
 body {
@@ -17,6 +18,67 @@ body {
   padding: 10px;
   /* 每135度做一次顏色 */
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.nav{
+  position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* background: #4070f4; */
+    padding: 20px;
+    transition: all 0.4s ease;
+}
+
+.nav .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+
+.nav .content .word a{
+  font-size: 18px;
+  text-decoration: none;
+  color: #eaf371;
+  font-weight: 900;
+  transition: all 0.4s ease;
+}
+
+.nav .content .word a:hover{
+  color: white;
+}
+
+.content .list{
+  display: flex;
+  align-items: center;
+}
+
+.content .list li{
+  padding: 0 8px;
+}
+
+/* 
+  background: linear-gradient(45deg, #ff4e4e, #9fff79);
+  background: -webkit-linear-gradient(45deg, #ff4e4e, #9fff79);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; 
+  文字漸層
+*/
+
+.content .list li a{
+  font-size: 16px;
+  color: #202020;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.4s ease;
+}
+
+.content .list li a:hover{
+  color: white;
 }
 
 .container {
