@@ -1,92 +1,313 @@
-{% extends 'portfolio/base.html' %}
-{% load static %}
+{% extends 'portfolio/base.html' %} 
+{% load static %} 
 
-{% block title %}Portfolio{% endblock %}
+{% block title%}Portfolio{% endblock %} 
 
 {% block content %}
 <!-- header start -->
- <header class="header">
-   <div class="container">
-      <div class="row justify-content-between">
-        <div class="logo">
-          <a href="/portfolio">W</a>
-        </div>
-        <div class="hamburger-btn outer-shadow hover-in-shadow">
-          <span></span>
+<header class="header">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="logo">
+        <a href="/portfolio">W</a>
+      </div>
+      <div class="hamburger-btn outer-shadow hover-in-shadow">
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header end -->
+
+<!-- navigation menu start -->
+<nav class="nav-menu">
+  <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
+  <div class="nav-menu-inner">
+    <ul>
+      <li><a href="#" class="inner-shadow active">home</a></li>
+      <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
+      <li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
+      <li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
+      <li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
+      <li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+    </ul>
+  </div>
+  <!-- copyright text -->
+  <p class="copyright-text">&copy; 2020 I Have No Copyright</p>
+</nav>
+<!-- navigation menu end -->
+
+<!-- home section start -->
+<section class="home-section section">
+  <!-- effect wrap start -->
+  <div class="effect-wrap">
+    <div class="effect effect-1"></div>
+    <div class="effect effect-2">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="effect effect-3"></div>
+    <div class="effect effect-4"></div>
+    <div class="effect effect-5">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- effect wrap end -->
+  <div class="container">
+    <div class="row full-screen align-items-center">
+      <div class="home-text">
+        <p>Hello</p>
+        <h1>I'm Kanna</h1>
+        <h2>Web Designer & Dragon Musume</h2>
+        <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+      </div>
+      <div class="home-img">
+        <div class="img-box inner-shadow">
+          <img src="{% static "portfolio/image/my.png" %}" class="outer-shadow"
+          alt="portfolio-pic">
         </div>
       </div>
     </div>
- </header>
- <!-- header end -->
+  </div>
+</section>
+<!-- home section end -->
 
- <!-- navigation menu start -->
- <nav class="nav-menu">
-   <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
-   <div class="nav-menu-inner">
-     <ul>
-       <li><a href="#" class="inner-shadow active">home</a></li>
-       <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
-       <li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
-       <li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
-       <li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
-       <li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
-     </ul>
-   </div>
-   <!-- copyright text -->
-   <p class="copyright-text">&copy; 2020 I Have No Copyright</p>
- </nav>
- <!-- navigation menu end -->
-
- <!-- home section start -->
- <section class="home-section section">
-    <!-- effect wrap start -->
-    <div class="effect-wrap">
-        <div class="effect effect-1"></div>
-        <div class="effect effect-2">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="effect effect-3"></div>
-        <div class="effect effect-4"></div>
-        <div class="effect effect-5">
-             <div></div> <div></div> <div></div> <div></div> <div></div>
-              <div></div> <div></div> <div></div> <div></div> <div></div>
-        </div>
+<!-- about section start -->
+<section class="about-section section">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2 data-heading="main-info">About me</h2>
+      </div>
     </div>
-    <!-- effect wrap end -->
-    <div class="container">
-        <div class="row full-screen align-items-center">
-            <div class="home-text">
-                <p>Hello</p>
-                <h1>I'm Kanna</h1>
-                <h2>Web Designer & Dragon Musume</h2>
-                <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
-            </div>
-            <div class="home-img">
-                <div class="img-box inner-shadow">
-                    <img src="{% static "portfolio/image/my.png" %}" class="outer-shadow" alt="portfolio-pic">
+    <div class="row">
+      <div class="about-img">
+        <div class="img-box inner-shadow">
+          <img src="{% static "portfolio/image/my.png" %}" class="outer-shadow"
+          alt="profile-pic">
+        </div>
+        <!-- social links start -->
+          <div class="social-links">
+            <a href="https://facebook.com" class="outer-shadow hover-in-shadow"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" class="outer-shadow hover-in-shadow"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" class="outer-shadow hover-in-shadow"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" class="outer-shadow hover-in-shadow"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        <!-- social links end -->
+      </div>
+      <div class="about-info">
+        <p>
+          <span>Hi! My name is Kanna. I am a dragon musume.</span>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. 
+          <p>It was popularised in the 1960s with the release of Letraset sheets 
+          containing Lorem Ipsum passages, and more recently with desktop publishing 
+          software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </p>
+        <a href="{% static "portfolio/cat.pdf" %}" class="btn-1 outer-shadow hover-in-shadow">Download Cv</a>
+        <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+      </div>
+    </div>
+    <!-- about tabs start -->
+      <div class="row">
+        <div class="about-tabs">
+          <span class="tab-item outer-shadow active" data-target=".skill">skills</span>
+          <span class="tab-item" data-target=".experience">experience</span>
+          <span class="tab-item" data-target=".education">education</span>
+        </div>
+      </div>
+    <!-- about tabs end -->
+    <!-- skills start -->
+      <div class="row">
+        <div class="skill tab-content active">
+          <div class="row">
+            <!-- skill item start-->
+            <div class="skill-item">
+              <p>Html</p>
+              <div class="progress inner-shadow">
+                <div class="progress-bar" style="width: calc(50% - 14px)">
+                  <span>50%</span>
                 </div>
+              </div>
             </div>
+            <!-- skill item end-->
+            <!-- skill item start-->
+            <div class="skill-item">
+              <p>javascript</p>
+              <div class="progress inner-shadow">
+                <div class="progress-bar" style="width: calc(60% - 14px)">
+                  <span>60%</span>
+                </div>
+              </div>
+            </div>
+            <!-- skill item end-->
+            <!-- skill item start-->
+            <div class="skill-item">
+              <p>bootstrap</p>
+              <div class="progress inner-shadow">
+                <div class="progress-bar" style="width: calc(70% - 14px)">
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+            <!-- skill item end-->
+            <!-- skill item start-->
+            <div class="skill-item">
+              <p>jquery </p>
+              <div class="progress inner-shadow">
+                <div class="progress-bar" style="width: calc(80% - 14px)">
+                  <span>80%</span>
+                </div>
+              </div>
+            </div>
+            <!-- skill item end-->
+            <!-- skill item start-->
+            <div class="skill-item">
+              <p>angular</p>
+              <div class="progress inner-shadow">
+                <div class="progress-bar" style="width: calc(90% - 14px)">
+                  <span>90%</span>
+                </div>
+              </div>
+            </div>
+            <!-- skill item end-->
+            <!-- skill item start-->
+            <div class="skill-item">
+              <p>html</p>
+              <div class="progress inner-shadow">
+                <div class="progress-bar" style="width: calc(100% - 14px)">
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+            <!-- skill item end-->
+          </div>
         </div>
-    </div>
- </section>
- <!-- home section end -->
+      </div>
+    <!-- skills end -->
+    <!-- experience start -->
+      <div class="row">
+        <div class="experience tab-content">
+          <div class="row">
+            <div class="timeline">
+              <div class="row">
+                <!-- timeline start -->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>Sep, 2021 - Present</span>
+                      <h3>full stack of steak</h3>
+                      <h4>Company name, Kanna</h4>
+                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>
+                <!-- timeline end -->
+                <!-- timeline start -->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>Sep, 2019 - April, 2020</span>
+                      <h3>web bedesigner</h3>
+                      <h4>Company name, Kanna</h4>
+                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>
+                <!-- timeline end -->
+                <!-- timeline start -->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>Sep, 2014 - Nov, 2015</span>
+                      <h3>web bedesigner</h3>
+                      <h4>Company name, Kanna</h4>
+                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>
+                <!-- timeline end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- experience end -->
+
+    <!-- education start -->
+      <div class="row">
+        <div class="education tab-content">
+          <div class="row">
+            <div class="timeline">
+              <div class="row">
+                <!-- timeline start -->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-graduation-cap icon"></i>
+                      <span>2020-2022</span>
+                      <h3>master in starburst stream</h3>
+                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>
+                <!-- timeline end -->
+                <!-- timeline start -->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-graduation-cap icon"></i>
+                      <span>2018-2020</span>
+                      <h3>master in starburst stream</h3>
+                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>
+                <!-- timeline end -->
+                <!-- timeline start -->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-graduation-cap icon"></i>
+                      <span>2016-2018</span>
+                      <h3>master in starburst stream</h3>
+                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>
+                <!-- timeline end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- education end -->
+  </div>
+</section>
+<!-- about section end -->
+
+<!-- main js -->
+<script src="{% static "portfolio/js/main.js" %}"></script>
 {% endblock %}
