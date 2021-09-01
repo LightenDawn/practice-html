@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-pticu(i@j08b+8v0)zh3+xhgk1u-noor+*=!0!8fe0q+e$(nq4
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# "192.168.0.10"
 
 # Application definition
 

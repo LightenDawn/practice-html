@@ -24,21 +24,22 @@
   <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
   <div class="nav-menu-inner">
     <ul>
-      <li><a href="#" class="inner-shadow active">home</a></li>
-      <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
-      <li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
-      <li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
-      <li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
-      <li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+      <li><a href="#home" class="link-item inner-shadow active">home</a></li>
+      <li><a href="#about" class="link-item outer-shadow hover-in-shadow">about</a></li>
+      <li><a href="#services" class="link-item outer-shadow hover-in-shadow">services</a></li>
+      <li><a href="#portfolio" class="link-item outer-shadow hover-in-shadow">portfolio</a></li>
+      <li><a href="#testimonial" class="link-item outer-shadow hover-in-shadow">testimonial</a></li>
+      <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">contact</a></li>
     </ul>
   </div>
   <!-- copyright text -->
   <p class="copyright-text">&copy; 2020 I Have No Copyright</p>
 </nav>
+<div class="fade-out-effect"></div>
 <!-- navigation menu end -->
 
 <!-- home section start -->
-<section class="home-section section">
+<section class="home-section section active" id="home">
   <!-- effect wrap start -->
   <div class="effect-wrap">
     <div class="effect effect-1"></div>
@@ -86,7 +87,7 @@
         <p>Hello</p>
         <h1>I'm Kanna</h1>
         <h2>Web Designer & Dragon Musume</h2>
-        <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+        <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
       </div>
       <div class="home-img">
         <div class="img-box inner-shadow">
@@ -100,7 +101,7 @@
 <!-- home section end -->
 
 <!-- about section start -->
-<section class="about-section section">
+<section class="about-section section" id="about">
   <div class="container">
     <div class="row">
       <div class="section-title">
@@ -136,7 +137,7 @@
           software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </p>
         <a href="{% static "portfolio/cat.pdf" %}" class="btn-1 outer-shadow hover-in-shadow">Download Cv</a>
-        <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+        <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
       </div>
     </div>
     <!-- about tabs start -->
@@ -309,7 +310,7 @@
 <!-- about section end -->
 
 <!-- service section start -->
-<section class="service-section section">
+<section class="service-section section" id="services">
   <div class="container">
     <div class="row">
       <div class="section-title">
@@ -389,7 +390,7 @@
 <!-- service section end -->
 
 <!-- portfolio section start -->
-<section class="portfolio-section section">
+<section class="portfolio-section section" id="portfolio">
   <div class="container">
     <div class="row">
       <div class="section-title">
@@ -668,7 +669,7 @@
 <!-- portfolio section end -->
 
 <!-- testimonial section start -->
-<section class="testimonial-section">
+<section class="testimonial-section section" id="testimonial">
   <div class="container">
     <div class="row">
       <div class="section-title">
@@ -745,30 +746,85 @@
 </section>
 <!-- testimonial section end -->
 
+<!-- contact section start -->
+<section class="contact-section section" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2 data-heading="contact">get in touch</h2>
+      </div>
+    </div>
+    <div class="row">
+      <!-- contact item start -->
+        <div class="contact-item">
+          <div class="contact-item-inner outer-shadow">
+            <i class="fas fa-phone"></i>
+            <span>Phone</span>
+            <p>+886 912 345 678</p>
+          </div>
+        </div>
+      <!-- contact end -->
+      <!-- contact item start -->
+        <div class="contact-item">
+          <div class="contact-item-inner outer-shadow">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+            <p>info@domain.com</p>
+          </div>
+        </div>
+      <!-- contact end -->
+      <!-- contact item start -->
+        <div class="contact-item">
+          <div class="contact-item-inner outer-shadow">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Address</span>
+            <p>San Louis Von Quierr, New member - 93</p>
+          </div>
+        </div>
+      <!-- contact end -->
+    </div>
+    <div class="row">
+      <div class="contact-form">
+        <form>
+          <div class="row">
+            <div class="w-50">
+              <div class="input-group outer-shadow hover-in-shadow">
+                <input type="text" placeholder="Name" class="input-control">
+              </div>
+              <div class="input-group outer-shadow hover-in-shadow">
+                <input type="text" placeholder="Email" class="input-control">
+              </div>
+              <div class="input-group outer-shadow hover-in-shadow">
+                <input type="text" placeholder="Subject" class="input-control">
+              </div>
+            </div>
+            <div class="w-50">
+              <div class="input-group outer-shadow hover-in-shadow">
+                <textarea class="input-control" placeholder="Message"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="submit-btn">
+              <button type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact section end -->
+
 <!-- portfolio popup start -->
 <div class="pp portfolio-popup">
   <div class="pp-details">
     <div class="pp-details-inner">
       <div class="pp-title">
-        <h2>personal portfolio</h2>
-        <p>Category - <span class="pp-project-category">Web Application</span></p>
+        <h2></h2>
+        <p>Category - <span class="pp-project-category"></span></p>
       </div>
-      <div class="pp-project-details">
-        <div class="row">
-          <div class="description">
-            <h3>project brief</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          </div>
-          <div class="info">
-            <h3>project info</h3>
-            <ul>
-              <li>Date - <span>2020</span></li>
-              <li>Client - <span>xyz</span></li>
-              <li>Tools - <span>html, css, javascript</span></li>
-              <li>Web - <span><a href="#">www.domain.com</a></span></li>
-            </ul>
-          </div>
-        </div>  
+      <div class="pp-project-details"> 
       </div>
     </div>
   </div>
@@ -793,6 +849,27 @@
 </div>
 <!-- portfolio popup end -->
 
+<!-- style switcher start - for demo purposes only -->
+<div class="style-switcher outer-shadow">
+  <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+    <i class="fas fa-cog fa-spin"></i>
+  </div>
+  <div class="day-night s-icon outer-shadow hover-in-shadow">
+    <i class="fas"></i>
+  </div>
+  <h4>Theme Colors</h4>
+  <div class="colors">
+    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+  </div>
+</div>
+<!-- style switcher end -->
+
 <!-- main js -->
 <script src="{% static "portfolio/js/main.js" %}"></script>
+<!-- stlye js -->
+<script src="{% static "portfolio/js/style-switcher.js" %}"></script>
 {% endblock %}
