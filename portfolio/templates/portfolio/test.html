@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "portfolio/css/test/tt.css" %}">
+    <link rel="icon" href="{% static "portfolio/image/my_image/myicon.ico" %}"> 
+    <title>Test Html</title>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="container">
+            <a href="{% static "../portfolio" %}">Back</a>
+            <a href="https://facebook.com">Front to FB</a>
+        </div>
+    </nav>
+    <section id="header"></section>
+
+    <section class="first-section section active" id="first">
+        <div class="container">
+          <div class="row">
+            <span class="span" id="first"></span>
+          </div>
+          <div class="row">
+            <img src="{% static "portfolio/image/my_image/pt2.png" %}" alt="back-img" class="inner-shadow hover-in-shadow">
+          </div>
+        </div>
+    </section>
+    <section class="second-section section" id="second">
+        <div class="container">
+          <div class="row">
+            <span class="span" id="second"></span>
+          </div>
+          <div class="row">
+            <img src="{% static "portfolio/image/my_image/pt3.png" %}" alt="back-img" class="inner-shadow hover-in-shadow">
+          </div>
+        </div>
+    </section>
+    <section class="third-section section" id="third">
+        <div class="container">
+          <div class="row">
+            <span class="span" id="third"></span>
+          </div>
+          <div class="row">
+            <img src="{% static "portfolio/image/my_image/pt4.png" %}" alt="back-img" class="inner-shadow hover-in-shadow">
+          </div>
+        </div>
+    </section>
+    <section class="fourth-section section" id="fourth">
+        <div class="container">
+          <div class="row">
+            <span class="span" id="fourth"></span>
+          </div>
+          <div class="row">
+            <img src="{% static "portfolio/image/my_image/pt5.png" %}" alt="back-img" class="inner-shadow hover-in-shadow">
+          </div>
+        </div>
+    </section>
+    <section class="fifth-section section" id="fifth">
+        <div class="container">
+          <div class="row">
+            <span class="span" id="fifth"></span>
+          </div>
+          <div class="row">
+            <img src="{% static "portfolio/image/my_image/pt6.png" %}" alt="back-img" class="inner-shadow hover-in-shadow">
+          </div>
+        </div>
+    </section>
+
+    <script src="{% static "portfolio/js/test.js" %}"></script>
+
+</body>
+</html>
