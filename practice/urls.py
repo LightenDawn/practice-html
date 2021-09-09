@@ -24,5 +24,6 @@ urlpatterns = [
     path('res/', include("responsive_registration.urls")),
     path('sticky/', include("sticky_nav.urls")),
     path('video/', include("movie_html.urls")),
-    path('portfolio/', include("portfolio.urls"))
+    path('portfolio/', include("portfolio.urls")),
+    path('foot/', include("foot.urls"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

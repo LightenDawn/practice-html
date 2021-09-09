@@ -29,8 +29,8 @@ body.dark{
     --bg-black-50: #2b2c2f;
     --bg-opacity: rgba(43, 44, 47, 0.5);
     --text-block-900: #ffffff;
-    --text-block-700: #ffffff;
-    --text-block-600: #bbbbbb;
+    --text-block-700: #8f8f8f;
+    --text-block-600: #cccccc;
     --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
     --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
     --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
@@ -246,6 +246,54 @@ img{
 .section.hide{
     display: none;
 }
+
+/*------------
+  preloader
+-------------*/
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1500;
+    background-color: var(--bg-black-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preloader.fade-out{
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+.preloader .box{
+    width: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+}
+.preloader .box div{
+    height: 15px;
+    width: 15px;
+    background-color: var(--skin-color);
+    border-radius: 50%;
+    animation: loaderAni 1s ease infinite;
+}
+.preloader .box div:nth-child(2){
+    animation-delay: 0.1s;
+}
+.preloader .box div:nth-child(3){
+    animation-delay: 0.2s;
+}
+@keyframes loaderAni{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
 /*------------
     header
 --------------*/
@@ -461,7 +509,7 @@ img{
 .home-section .home-img .img-box img{
     width: 100%;
     max-height: 450px;
-    object-fit: cover;
+    object-fit: cover;  
     border-radius: 50%;
     border: 10px solid transparent;
 }
