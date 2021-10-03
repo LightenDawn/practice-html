@@ -1,0 +1,43 @@
+{% extends 'digital_clock/base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static "digital_clock/index.css" %}">
+{% endblock  %}
+{% block title %}Digital Clock{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="icons">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun active"></i>
+            </div>
+            <div class="time">
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num hour_num">08</span>
+                        <span class="text">Hours</span>
+                    </div>
+                    <span class="colon">:</span>
+                </div>
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num min_num">45</span>
+                        <span class="text">Minutes</span>
+                    </div>
+                    <span class="colon">:</span>
+                </div>
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num sec_num">06</span>
+                        <span class="text">Seconds</span>
+                    </div>
+                    <span class="am_pm">AM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static "digital_clock/js/index.js" %}"></script>
+{% endblock %}

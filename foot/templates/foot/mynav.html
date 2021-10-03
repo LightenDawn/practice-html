@@ -1,0 +1,74 @@
+{% extends 'foot/base.html' %}
+{% load static %}
+
+{% block css_style %}
+    <link rel="stylesheet" href="{% static "foot/mynav.css" %}">
+{% endblock  %}
+{% block title %}My Navigation Web{% endblock  %}
+
+{% block content %}
+    <section class="header">
+        <div class="container">
+            <div class="row control">
+                <img src="{% static "foot/image/logo.png" %}" alt="logo">
+            </div>
+            <div class="row">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="lefter">
+    
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="row-col">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <h2>get help</h2>
+                    <ul>
+                        <li><a href="#">faq</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <h2>online shop</h2>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <h2>follow us</h2>
+                    <div class="social-link">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock  %}

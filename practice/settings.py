@@ -33,6 +33,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'htmlonly',
+    'digital_clock',
+    'downloadbutton',
+    'theme',
+    'dashboard',
+    'portfolio2',
     'fontawesome_free',
     'foot',
     'portfolio',

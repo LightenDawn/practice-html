@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, "foot/index.html")
+
+def mynavigation(request):
+    return render(request, "foot/mynav.html")

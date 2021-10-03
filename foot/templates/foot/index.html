@@ -1,5 +1,9 @@
 {% extends 'foot/base.html' %}
+{% load static %}
 
+{% block css_style %}
+    <link rel="stylesheet" href="{% static "foot/index.css" %}">
+{% endblock %}
 {% block title %}Footer Navigation{% endblock %}
 
 {% block content %}

@@ -25,5 +25,11 @@ urlpatterns = [
     path('sticky/', include("sticky_nav.urls")),
     path('video/', include("movie_html.urls")),
     path('portfolio/', include("portfolio.urls")),
-    path('foot/', include("foot.urls"))
+    path('foot/', include("foot.urls")),
+    path('portfolio2/', include("portfolio2.urls")),
+    path('dashboard/', include("dashboard.urls")),
+    path('theme/', include("theme.urls")),
+    path('download/', include("downloadbutton.urls")),
+    path('clock/', include('digital_clock.urls')),
+    path('htmlonly', include('htmlonly.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
